@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import { appRoutes } from './react-routes';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+const routes = appRoutes();
+
+ReactDOM.render(routes, document.getElementById('root'));

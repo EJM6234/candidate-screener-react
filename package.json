@@ -1,5 +1,5 @@
 {
-  "name": "Candidate Screener",
+  "name": "candidate-screener",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",

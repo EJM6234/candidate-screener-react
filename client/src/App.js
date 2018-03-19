@@ -1,18 +1,42 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { Button } from 'react-bootstrap';
+import Landing from './components/Landing';
 import './App.css';
 
 class App extends Component {
+  goTo(route) {
+    this.props.history.replace(`/${route}`)
+  }
+
+  login() {
+    this.props.auth.login();
+  }
+
+  logout() {
+    this.props.auth.logout();
+  }
+
   render() {
+    const { isAuthenticated } = this.props.auth;
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        {
+          !isAuthenticated() && (
+            <Landing auth={this.props.auth}/>
+          )
+        }
+        {
+          isAuthenticated() && (
+            <Button
+              bsStyle="primary"
+              className="btn-margin"
+              onClick={this.logout.bind(this)}
+            >
+              Log Out
+            </Button>
+          )
+        }
       </div>
     );
   }
