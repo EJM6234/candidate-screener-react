@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
-import Landing from './components/Landing';
+import Login from './pages/Login';
 import './App.css';
 
 class App extends Component {
@@ -9,7 +9,7 @@ class App extends Component {
   }
 
   login() {
-    this.props.auth.login();
+    this.props.history.replace('/login');
   }
 
   logout() {
@@ -23,7 +23,7 @@ class App extends Component {
       <div>
         {
           !isAuthenticated() && (
-            <Landing auth={this.props.auth}/>
+            <Login auth={this.props.auth}/>
           )
         }
         {
