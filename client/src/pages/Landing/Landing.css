@@ -1,4 +1,4 @@
-#page {
+#background {
   min-height: 100%;
   min-width: 1024px;
   width: 100%;
@@ -9,7 +9,7 @@
   z-index: -100;
 }
 
-.notAuthContainer {
+.not-auth-container {
   display: flex;
   align-items: center;
   justify-content: center;

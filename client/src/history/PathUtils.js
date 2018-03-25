@@ -1,10 +1,13 @@
+// eslint-disable-next-line
 'use strict';
 
 exports.__esModule = true;
+// eslint-disable-next-line
 var addLeadingSlash = exports.addLeadingSlash = function addLeadingSlash(path) {
   return path.charAt(0) === '/' ? path : '/' + path;
 };
 
+// eslint-disable-next-line
 var stripLeadingSlash = exports.stripLeadingSlash = function stripLeadingSlash(path) {
   return path.charAt(0) === '/' ? path.substr(1) : path;
 };
@@ -13,14 +16,17 @@ var hasBasename = exports.hasBasename = function hasBasename(path, prefix) {
   return new RegExp('^' + prefix + '(\\/|\\?|#|$)', 'i').test(path);
 };
 
+// eslint-disable-next-line
 var stripBasename = exports.stripBasename = function stripBasename(path, prefix) {
   return hasBasename(path, prefix) ? path.substr(prefix.length) : path;
 };
 
+// eslint-disable-next-line
 var stripTrailingSlash = exports.stripTrailingSlash = function stripTrailingSlash(path) {
   return path.charAt(path.length - 1) === '/' ? path.slice(0, -1) : path;
 };
 
+// eslint-disable-next-line
 var parsePath = exports.parsePath = function parsePath(path) {
   var pathname = path || '/';
   var search = '';
@@ -45,6 +51,7 @@ var parsePath = exports.parsePath = function parsePath(path) {
   };
 };
 
+// eslint-disable-next-line
 var createPath = exports.createPath = function createPath(location) {
   var pathname = location.pathname,
       search = location.search,

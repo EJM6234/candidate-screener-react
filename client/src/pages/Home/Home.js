@@ -1,10 +1,20 @@
 import React, { Component } from "react";
+import { Button } from 'react-bootstrap';
 
 class Home extends Component {
   render() {
-    { console.log("Home has rendered") }
+    console.log("Home props", this.props)
     return (
-      <h1>Here is your profile</h1>
+      <div>
+        <h1>Here is your profile</h1>
+        <Button
+          bsStyle="primary"
+          className="btn-margin"
+          onClick={() => {this.props.auth.logout()}}
+        >
+          Log Out
+        </Button>
+      </div>
     );
   }
 }

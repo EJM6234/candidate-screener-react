@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 'use strict';
 
 exports.__esModule = true;
@@ -17,6 +18,7 @@ var _PathUtils = require('./PathUtils');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// eslint-disable-next-line
 var createLocation = exports.createLocation = function createLocation(path, state, key, currentLocation) {
   var location = void 0;
   if (typeof path === 'string') {
@@ -73,6 +75,7 @@ var createLocation = exports.createLocation = function createLocation(path, stat
   return location;
 };
 
+// eslint-disable-next-line
 var locationsAreEqual = exports.locationsAreEqual = function locationsAreEqual(a, b) {
   return a.pathname === b.pathname && a.search === b.search && a.hash === b.hash && a.key === b.key && (0, _valueEqual2.default)(a.state, b.state);
 };

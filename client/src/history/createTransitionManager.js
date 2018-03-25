@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 'use strict';
 
 exports.__esModule = true;
