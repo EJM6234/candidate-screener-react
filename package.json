@@ -10,18 +10,31 @@
     "build": "node scripts/build.js",
     "seed": "node scripts/seedDB.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "installDeps": "yarn install && cd client && yarn install"
+    "installDeps": "yarn install && cd client && yarn install && cd .."
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^3.5.0",
+    "nan": "^2.10.0",
     "nodemon": "^1.11.0"
   },
   "dependencies": {
+    "bcrypt": "^2.0.0",
+    "bcrypt-nodejs": "^0.0.3",
     "body-parser": "^1.18.2",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
     "express": "^4.16.3",
+    "express-session": "^1.15.6",
     "mysql2": "^1.5.3",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "react": "^16.3.1",
+    "react-bootstrap": "^0.32.1",
+    "react-dom": "^16.3.1",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "^1.1.4",
     "sequelize": "^4.37.4"
   }
 }

@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
-import { Button } from 'react-bootstrap';
+import LogInButton from '../../components/LogInButton';
+import SignUpButton from '../../components/SignUpButton';
 import './Landing.css'
 
 class Landing extends Component {
+
   render() {
-    console.log("Landing props", this.props)
     return (
       <div id="background" style={{backgroundImage: 'url("img/office-background.jpg")'}}>
-        <div className="container not-auth-container">
+        <div id="landing-content-div" className="container text-center">
           <h1 className="header">Candidate Screener</h1>
-          <Button
-            bsStyle="primary"
-            className="btn-margin"
-            onClick={() => {this.props.auth.login()}}
-          >
-            Log In
-          </Button>
+          <div id="login-button-div" className="row">
+            <LogInButton className="text-center" history={this.props.history} />
+          </div>
+          <div className="row">
+            <SignUpButton className="text-center" history={this.props.history} />
+          </div>
         </div>
       </div>
     )

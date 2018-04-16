@@ -1,3 +1,5 @@
 module.exports = {
-  User: require("./userController")
+  Candidate: require("./candidateController"),
+  HiringManager: require("./hiringManagerController"),
+  Company: require("./companyController")
 };
